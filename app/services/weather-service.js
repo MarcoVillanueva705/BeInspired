@@ -13,6 +13,9 @@ class WeatherService {
     let res = await weatherApi.get();
     store.commit("weather", new Weather(res.data));
   }
+  constructor(){
+    console.log("hello from services")
+  }
 }
 
 const weatherService = new WeatherService();
