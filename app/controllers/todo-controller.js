@@ -5,7 +5,9 @@ import store from "../store.js";
 function _drawTodos() {
   let template = "";
   let todos = store.State.todos;
-  document.querySelector("#todos").innerHTML = template += `<p>${todos.description}</p>`;
+  // document.querySelector("#todos").innerHTML = template += `<p>${todos.description}</p>`;
+  todos.forEach(todo => template += todo.Template)
+  document.getElementById('todos').innerHTML = template
 }
  
 export default class TodoController {
@@ -13,8 +15,9 @@ export default class TodoController {
     //TODO Remember to register your subscribers
     store.subscribe("todos", _drawTodos)
     TodoService.getTodos();
+    TodoService.loadTodos();
     console.log("hello from todo controller")
-    TodoService.addTodoAsync()
+    // TodoService.addTodoAsync()
     
   }
 
@@ -23,7 +26,7 @@ export default class TodoController {
     var formData = e.target;
     var newTodo = {
       //TODO build the todo object from the data that comes into this method
-      user: formData.user.value,
+      // user: formData.user.value,
       description: formData.description.value
     };
     try {

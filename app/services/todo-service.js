@@ -20,12 +20,29 @@ class TodoService {
   async addTodoAsync(newTodo) {
     todoApi.post("", newTodo).then(res =>{
       console.log("from add Todo Async", res)
-      store.commit("todos", res)
-      console.log(store.State.todos)
-    });
+      // store.commit("todos", res.data.data)
+      // console.log(store.State.todos)
+      // this.loadTodos()
+    }).catch(err=>{
+      console.error(err)
+    })
+    }
+
+    loadTodos() {
+      todoApi.get("").then(res => {
+        console.log(res)
+        let todos = res.data.data.map(t => new Todo(t))
+        store.commit("todos", todos)
+      }).catch(err =>{
+        console.error(err)
+      })
+      }
+  
+  
+  
+    
     
     //TODO Handle this response from the server (hint: what data comes back, do you want this?)
-  }
 
   async toggleTodoStatusAsync(todoId) {
     let todo = store.State.todos.find(todo => todo._id == todoId);
@@ -43,6 +60,7 @@ class TodoService {
     //		once the response comes back, what do you need to insure happens?
   }
 }
+
 
 const todoService = new TodoService();
 export default todoService;

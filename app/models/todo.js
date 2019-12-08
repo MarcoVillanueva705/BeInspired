@@ -7,6 +7,14 @@ export default class Todo{
     this.description = data.description
   }
   get Template(){
-    return
+    return `
+
+    <div>
+
+        <h2>${this.description}</h2>
+
+    </div>
+
+`
   }
 } 
