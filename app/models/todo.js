@@ -12,6 +12,7 @@ export default class Todo{
     <div>
 
         <h2>${this.description}</h2>
+        <button type="button" class="btn btn-danger btn-block" onclick="app.todoController.removeTodo('${this._id}')">Delete</button>
 
     </div>
 

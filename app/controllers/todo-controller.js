@@ -15,7 +15,7 @@ export default class TodoController {
     //TODO Remember to register your subscribers
     store.subscribe("todos", _drawTodos)
     TodoService.getTodos();
-    TodoService.loadTodos();
+    TodoService.loadTodosAsync();
     console.log("hello from todo controller")
     // TodoService.addTodoAsync()
     

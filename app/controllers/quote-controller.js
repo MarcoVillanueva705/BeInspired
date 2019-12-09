@@ -6,7 +6,7 @@ import store from "../store.js";
 function _draw(){
   let template = ""
   let quote = store.State.quote;
-  document.querySelector("#quote").innerHTML = template += `<p>${quote.quote.body}</p>`
+  document.querySelector("#quote").innerHTML = template += `<p>${quote.quote.body}</p>-<p>${quote.quote.author}</P>`
 }
 
 //TODO Create methods for constructor, and rendering the quote to the page

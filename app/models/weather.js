@@ -9,6 +9,6 @@ export default class Weather {
     //      check out the other data that comes back and see if there is anything you want to try
 
     this.city = data.name
-    this.kelvin = data.main.temp
+    this.kelvin = Math.floor((data.main.temp-273.15)*1.8)+32
   }
 }
