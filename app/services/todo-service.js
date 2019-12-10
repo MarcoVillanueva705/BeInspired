@@ -52,9 +52,17 @@ class TodoService {
     //TODO Make sure that you found a todo,
     //		and if you did find one
     //		change its completed status to whatever it is not (ex: false => true or true => false)
-    if(todo.completed == false){
-      let res = await todoApi.put(`${todoId}`);
-    }
+
+    //NOTE //below, this inverts the boolean property easily
+    todo.completed = !todo.completed
+    todoApi.put(todoId, todo).then(res =>{
+    this.loadTodosAsync()
+    console.log(res)
+  }).catch(err=>{
+    console.error(err)
+  })
+    
+    
 
     
     //TODO do you care about this data? or should you go get something else?

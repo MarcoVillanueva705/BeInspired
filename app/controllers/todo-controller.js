@@ -8,9 +8,9 @@ function _drawTodos() {
   // document.querySelector("#todos").innerHTML = template += `<p>${todos.description}</p>`;
   todos.forEach(todo => template += todo.Template)
   document.getElementById('todos').innerHTML = template
-  let todoCount = todos.toString().length
+  let todoCount = todos.length
+  // @ts-ignore
   document.getElementById("demo").innerHTML = todoCount
-
 }
  
 export default class TodoController {
