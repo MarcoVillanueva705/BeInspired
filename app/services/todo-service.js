@@ -37,9 +37,10 @@ class TodoService {
     //undefined on the page, but don't understand why it works.
     async loadTodosAsync() {
       todoApi.get("").then(res => {
-        console.log(res)
+        console.log("this is res from load todos async", res)
         let todos = res.data.data.map(t => new Todo(t))
         store.commit("todos", todos)
+        console.log("from load todos async",todos)
       }).catch(err =>{
         console.error(err)
       })
