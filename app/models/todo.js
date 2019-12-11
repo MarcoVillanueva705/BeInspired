@@ -10,17 +10,23 @@ export default class Todo{
     let template =`
     /*html*/
     <div>
-
-        <li>${this.description}</li>
+    
+        <li class="${this.completed?'strikes':""}">${this.description}</li>
         <button type="button" class="btn btn-danger btn-block" onclick="app.todoController.removeTodo('${this._id}')">Delete</button>`
         
         if(this.completed == false){
-          template += `<button type="button" onclick="app.todoController.toggleToDoStatus('${this._id}')">Check Off</button>`
+          template += `<button type="button" onclick="app.todoController.toggleTodoStatus('${this._id}')">Check Off</button>`
         }else{
-          template += `<button type="button" onclick="app.todoController.toggleToDoStatus('${this._id}')">Not Completed</button>`
+          template += `<button type="button" onclick="app.todoController.toggleTodoStatus('${this._id}')">Not Completed</button>`
         }
         template +=` </div>
     </div>`
     return template;
   }
   }
+
+  // if(this.completed){
+  //   <del><p>this.description</p></del>
+  // }else{
+  // <p>this.description</p>
+  // }
