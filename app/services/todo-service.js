@@ -20,7 +20,7 @@ class TodoService {
       console.log("store todos", store.State.todos)
     });
     //TODO Handle this response from the server
-  }T
+  }
   async addTodoAsync(newTodo) {
     todoApi.post("", newTodo).then(res =>{
       this.loadTodosAsync()

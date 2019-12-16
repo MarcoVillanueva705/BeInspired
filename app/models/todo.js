@@ -8,7 +8,6 @@ export default class Todo{
   }
   get Template(){
     let template =`
-    /*html*/
     <div>
     
         <li class="${this.completed?'strikes':""}">${this.description}</li>

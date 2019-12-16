@@ -3,14 +3,27 @@
   font-size: 2em;
 }
 
+*{
+  outline: 1px solid red;
+} 
+
 .photo{
   opacity: 0.5;
   background-attachment: fixed;
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
   filter: alpha(opacity=50);
 }
 
 .strikes{  
   text-decoration: line-through;
 }
+
+#weather-position{
+  float: right;
+}
+
+.row div {
+  min-height: 100px;
+}
+
 
