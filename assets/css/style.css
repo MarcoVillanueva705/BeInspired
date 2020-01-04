@@ -1,10 +1,17 @@
+body, html {
+  min-height: 100%;
+  background-size: cover;
+  margin: 0;
+}
+
 #todo-error{
   color: red;
   font-size: 2em;
 }
 
 *{
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
+  text-align: center; 
 } 
 
 .photo{
@@ -14,16 +21,23 @@
   filter: alpha(opacity=50);
 }
 
+#bg-image{
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: alpha(opacity=50);
+}
+
 .strikes{  
   text-decoration: line-through;
 }
 
-#weather-position{
+#side-position{
   float: right;
 }
 
 .row div {
   min-height: 100px;
 }
-
 

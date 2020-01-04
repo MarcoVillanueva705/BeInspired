@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="bg-image" class="font-weight-bold" >
+<body id="bg-image" class="font-weight-bold text-danger" >
 
 <section class="container-fluid">
   <div class="row">
@@ -19,40 +19,61 @@
 		</div>
 		<div class="col-lg-4">
 		</div>
-						<div class="col-lg-4" id="weather-position">
+						<div class="col-lg-4 text-white bg-dark" id="side-position">
 							<h4>Your Weather</h4>
 							<p id="weather"></p>
 						</div>
 	</div>
 </section>
 
-	<h1>The Quote</h1>
-	<div id="quote">
-		
-		
-	</div>
-
-	<div>
-		A Todo List
-		<div id="todo-error"></div>
-		<form onsubmit="app.todoController.addTodo(event)">
-			<div class="form-group">
-				<label for="description" >Have to Do: <span id="demo"></span></label>
-				<input type="text" name="description" class="form-control" placeholder="Enter Item to Do..." required>
-			</div>
-			<button type="submit" class="btn btn-primary btn-block">Submit</button>
-		</form>
-		<div id="todos">
-			<ol>
-				
-			</ol>
-			
+<section class="container-fluid">
+	<div class="row"> 
+		<div class="col-lg-4">
+		</div>
+		<div class="col-lg-4">
+			<iframe src="http://free.timeanddate.com/clock/i7301otk/n80/fs32/fcfff/tc333/pct/ftb/tt0/tw1/tm1/ts1/ta1/tb4" frameborder="0" width="282" height="76" allowTransparency="true"></iframe>
+		</div>
+		<div class="col-lg-4">
 		</div>
 	</div>
+</section>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-	<script type="module" src="app/main.js"></script>
+<section class="container-fluid">
+	<div class="row"> 
+		<div class="col-lg-4">
+		</div>
+		<div class="col-lg-4">
+		</div>
+		<div class="col-lg-4">
+		</div>
+	</div>
+</section>
+
+<section class="container-fluid">
+	<footer class="row align-items-end">
+		<div class="order-2 col-lg-4 order-lg-1 text-white bg-dark">
+			<h1>Quote of the Day</h1> 
+				<div class="text-white bg-dark" id="quote">
+				</div>
+		</div>
+		<div class="order-1 col-lg-8 order-lg-2 text-md-right" id="side-position">
+			<!--<div id="todo-error"></div>-->
+			<form onsubmit="app.todoController.addTodo(event)">
+				<div class="form-group">
+					<label class = "text-white bg-dark" for="description" ><h1>Have to Do:</h1><span id="demo"></span> items</label>
+					<input type="text" name="description" class="form-control" placeholder="Enter Item to Do..." required>
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+			</form>
+			<p class="text-white bg-dark" id="todos">
+				<ol>
+				</ol>
+			</p>
+		</div>
+	</footer>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+<script type="module" src="app/main.js"></script>
 </body>
-
 </html>
-<html>
