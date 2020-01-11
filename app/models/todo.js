@@ -11,12 +11,12 @@ export default class Todo{
     <div>
     
         <li class="${this.completed?'strikes':""}">${this.description}</li>
-        <button type="button" class="btn btn-danger btn-block" onclick="app.todoController.removeTodo('${this._id}')">Delete</button>`
+        <button type="button" class="btn btn-outline-danger" onclick="app.todoController.removeTodo('${this._id}')">Delete</button>`
         
         if(this.completed == false){
-          template += `<button type="button" onclick="app.todoController.toggleTodoStatus('${this._id}')">Check Off</button>`
+          template += `<button type="button" class="btn btn-outline-warning" onclick="app.todoController.toggleTodoStatus('${this._id}')">Check Off</button>`
         }else{
-          template += `<button type="button" onclick="app.todoController.toggleTodoStatus('${this._id}')">Not Completed</button>`
+          template += `<button type="button" class="btn btn-outline-info" onclick="app.todoController.toggleTodoStatus('${this._id}')">Not Completed</button>`
         }
         template +=` </div>
     </div>`
