@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "node app.js" 
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/MarcoVillanueva705/BeInspired/issues"
   },
-  "homepage": "https://github.com/MarcoVillanueva705/BeInspired#readme"
+  "homepage": "https://github.com/MarcoVillanueva705/BeInspired#readme",
+  "dependencies": {
+    "sweetalert2": "^9.8.2"
+  }
 }

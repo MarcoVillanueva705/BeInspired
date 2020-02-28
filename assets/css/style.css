@@ -9,7 +9,6 @@ body, html {
 }
 
 *{
-  /* outline: 1px solid red; */
   text-align: center; 
 } 
 
@@ -38,6 +37,10 @@ body, html {
 
 .row div {
   min-height: 100px;
+}
+
+.smooth {
+  opacity: 1;
 }
 
 
