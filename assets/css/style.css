@@ -40,7 +40,11 @@ body, html {
 }
 
 .smooth {
-  opacity: 1;
+opacity: 1;
+display: block;
+width: 100%;
+height: auto;
+backface-visibility: hidden;
 }
 
 
