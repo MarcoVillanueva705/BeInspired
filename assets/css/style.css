@@ -39,12 +39,5 @@ body, html {
   min-height: 100px;
 }
 
-.smooth {
-opacity: 1;
-display: block;
-width: 100%;
-height: auto;
-backface-visibility: hidden;
-}
 
 
