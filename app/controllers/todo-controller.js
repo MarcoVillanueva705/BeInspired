@@ -5,7 +5,6 @@ import store from "../store.js";
 function _drawTodos() {
   let template = "";
   let todos = store.State.todos;
-  // document.querySelector("#todos").innerHTML = template += `<p>${todos.description}</p>`;
   todos.forEach(todo => template += todo.Template)
   document.getElementById('todos').innerHTML = template
   let todoCount = todos.length
@@ -19,9 +18,7 @@ export default class TodoController {
     store.subscribe("todos", _drawTodos)
     TodoService.getTodos();
     TodoService.loadTodosAsync();
-    console.log("hello from todo controller")
-    // TodoService.addTodoAsync()
-    
+    console.log("hello from todo controller")    
   }
 
   async addTodo(e) {

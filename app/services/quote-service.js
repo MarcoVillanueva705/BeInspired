@@ -1,4 +1,3 @@
-// import _store from "../store.js"
 import store from "../store.js";
 
 // @ts-ignore

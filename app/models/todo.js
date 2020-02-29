@@ -23,9 +23,3 @@ export default class Todo{
     return template;
   }
   }
-
-  // if(this.completed){
-  //   <del><p>this.description</p></del>
-  // }else{
-  // <p>this.description</p>
-  // }

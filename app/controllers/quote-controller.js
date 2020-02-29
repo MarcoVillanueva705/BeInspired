@@ -1,7 +1,5 @@
 import QuoteService from "../services/quote-service.js";
-// import _store from "../store.js";
 import store from "../store.js";
-// import quoteService from "../services/quote-service.js";
 
 function _draw(){
   let template = ""

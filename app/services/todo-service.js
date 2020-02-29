@@ -33,8 +33,6 @@ class TodoService {
     })
     }
 
-    //ANCHOR WHAT is happening in the method below?  I used the example from greg's list to stop getting 
-    //undefined on the page, but don't understand why it works.
     async loadTodosAsync() {
       todoApi.get("").then(res => {
         console.log("this is res from load todos async", res)
@@ -69,8 +67,6 @@ class TodoService {
     //TODO do you care about this data? or should you go get something else?
   }
 
-  // _carApi.put("/cars/"+carId, { price: +carPrice + 100}).then(res =>{
-
   async removeTodoAsync(todoId) {
    await todoApi.delete(`${todoId}`).then(res =>{
      this.loadTodosAsync()
@@ -80,7 +76,7 @@ class TodoService {
     })
     //TODO Work through this one on your own
     //		what is the request type
-    //		once the response comes back, what do you need to insure happens?
+    //		once the response comes back, what do you need to ensure happens?
   }
 }
 
